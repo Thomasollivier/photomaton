@@ -1,1 +1,56 @@
 // Specific CSS for your home-page
+body {
+  background-color: #3FB498;
+}
+
+#logo {
+  width: 180px;
+}
+
+img {
+  width: 214px
+}
+
+.img_padding {
+  padding-bottom: 10px;
+}
+
+a:hover {
+  color:  white;
+  text-shadow: 0.2px 0.2px 0.2px grey
+}
+
+a, ul {
+  color: #a4a4a4;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  color:  white;
+  font-family: 'Montserrat';
+  text-align: center;
+}
+
+h2, h4 {
+  color: white;
+  font-family: 'Roboto';
+}
+
+p {
+  color: #a4a4a4;
+  font-family: 'Montserrat';
+}
+
+.card {
+  margin: 20px auto;
+  padding: 40px;
+  width: 600px;
+}
+
+.lol {
+  background-color: #303f9f;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+}
