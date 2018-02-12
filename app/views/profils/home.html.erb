@@ -15,17 +15,17 @@
 </head>
 
 <body>
-   <div class="card text-center">
+
+  <div class="card text-center">
     <%= image_tag "logoblanc.png", id: "logo" %>
+  </div>
+
+  <div class="card text-center">
     <h1>Bienvenue dans le Photomaton d'Okoni !</h1>
-    <br>
-    <h4>Grâce à lui, vous allez faire partie de la communautée Okoni. Vous allez renseigner
-        quelques informations qui pourront nous être utiles si nous avons besoins de vous,
-        ou tout simplement pour vous tenir informé des activitées de l'agence ! Vous êtes prêt ?
-    </h4>
-    <br>
-    <a href="http://www.theuselessweb.com/" class="lol" target="_blank">Let's go !</a>
-</div>
+  </div>
+  <div class="card text-center">
+    <%= link_to "Rejoignez nous !", new_profil_path,  :class => "btn btn-primary" %>
+  </div>
 
 </body>
 </html>

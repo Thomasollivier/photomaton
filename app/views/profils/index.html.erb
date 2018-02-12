@@ -1,0 +1,20 @@
+<% @profils.each do |profil| %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+      <div class="form-profil">
+
+          <div class="basics"><h1> <%= profil.name %> </h1>
+          <h1> <%= profil.lastname %> </h1></div>
+          <h4> <%= profil.organisation %> </h4>
+          <h4> <%= profil.job %> </h4>
+          <div class="flex">
+            <div><%= link_to "delete", profil_path(profil), method: :delete %></div>
+            <div><%= link_to "plus d'information", profil_path(profil) %></div>
+
+          <div>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

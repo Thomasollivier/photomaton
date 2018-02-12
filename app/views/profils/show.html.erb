@@ -1,0 +1,78 @@
+<h1 class="form"> Bienvenue dans la famille !</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+      <div class="form-profil">
+        <div class="basics">
+        <h1> <%= @profil.name %> </h1>
+        <h1> <%= @profil.lastname %> </h1>
+        </div>
+        <div class="flex">
+          <div>
+            <i class="fa fa-envelope"></i>
+          </div>
+          <div>
+            <h4> <%= @profil.mail %> </h4>
+          </div>
+          <div>
+            <i class="color fa fa-envelope"></i>
+          </div>
+        </div>
+         <div class="flex">
+            <div>
+                <i class="fa fa-phone"></i>
+            </div>
+            <div>
+                <h4> <%= @profil.phone %> </h4>
+            </div>
+            <div>
+                <i class="color fa fa-phone"></i>
+            </div>
+
+          </div>
+        <div class="flex">
+          <div>
+            <i class="fa fa-building"></i>
+          </div>
+          <div>
+            <h4> <%= @profil.organisation %> </h4>
+          </div>
+          <div>
+            <i class="color fa fa-building"></i>
+          </div>
+        </div>
+        <div class="flex">
+          <div>
+            <i class="fa fa-bullseye"></i>
+          </div>
+          <div>
+              <h4> <%= @profil.job %> </h4>
+          </div>
+          <div>
+            <i class="color fa fa-bullseye"></i>
+          </div>
+        </div>
+        <div class="basics">
+          <h4> <%= @profil.expertise %> </h4>
+        </div>
+        <div >
+          <h4> <%= @profil.interest %> </h4>
+        </div>
+        <div class="link"><%= link_to "retour à la page d'accueil", root_path %></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  <!-- <h1> <%= @profil.name %> </h1>
+        <h2> <%= @profil.lastname %> </h2>
+        <h3> <%= @profil.phone %> </h3>
+        <h3> <%= @profil.mail %> </h3>
+        <h3> <%= @profil.organisation %> </h3>
+        <h3> <%= @profil.job %> </h3>
+        <h3> <%= @profil.expertise %> </h3>
+        <h4> <%= @profil.interest %> </h4> -->

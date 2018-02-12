@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+      <div class="form-profil">
+        <h1> Qui êtes-vous ? </h1>
+        <%= simple_form_for @profil do |f| %>
+          <div class="row">
+            <div class="col-xs-6">
+              <%= f.input :name, placeholder: "Thomas" %>
+            </div>
+            <div class="col-xs-6">
+              <%= f.input :lastname, placeholder: "Ollivier" %>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-6">
+              <%= f.input :phone, placeholder: "065925706" %>
+            </div>
+            <div class="col-xs-6">
+              <%= f.input :mail, placeholder: "tollivier@okoni.fr" %>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-6">
+                <%= f.input :organisation, placeholder: "Okoni" %>
+            </div>
+            <div class="col-xs-6">
+                <%= f.input :job, placeholder: "Designer UX" %>
+            </div>
+          </div>
+
+          <!-- LA TU AS L HTML DE L ADVENCED CHECK BOXES -->
+
+          <!-- <div class="form-group">
+
+
+            <label class="control-label check_boxes optional">Expertises</label>
+            <input name="profil[expertise_ids][]" value="" type="hidden">
+            <div class="expertise-choices">
+              <% Expertise.all.each do |expertise| %>
+                <input class="hidden" value="<%= expertise.id %>" name="profil[expertise_ids][]" id="profil_expertise_ids_<%= expertise.id %>" type="checkbox">
+
+                <label class="expertise-choice" for="profil_expertise_ids_<%= expertise.id %>">
+                  <%= expertise.name %>
+                  <i class="fa fa-check"></i>
+                </label>
+              <% end %>
+            </div>
+          </div> -->
+
+          <%= f.input :interest, placeholder: "Tout" %>
+          <%= f.submit "Devenez Okonien", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

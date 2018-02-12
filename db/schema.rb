@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170915093313) do
+ActiveRecord::Schema.define(version: 20170918090126) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "expertises", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "profil_expertises", force: :cascade do |t|
+    t.integer  "profil_id"
+    t.integer  "expertise_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["expertise_id"], name: "index_profil_expertises_on_expertise_id", using: :btree
+    t.index ["profil_id"], name: "index_profil_expertises_on_profil_id", using: :btree
+  end
 
   create_table "profils", force: :cascade do |t|
     t.string   "name"
@@ -28,4 +43,6 @@ ActiveRecord::Schema.define(version: 20170915093313) do
     t.datetime "updated_at",   null: false
   end
 
+  add_foreign_key "profil_expertises", "expertises"
+  add_foreign_key "profil_expertises", "profils"
 end
